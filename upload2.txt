@@ -1,0 +1,24 @@
+https://docs.mapbox.com/help/tutorials/upload-curl/
+
+curl -X POST "https://api.mapbox.com/uploads/v1/ciegotur/credentials?access_token=sk.eyJ1CJhIjoiY2xyOWx6ZWl1MDM4YTJqbnh5OXJnOXdvZyJ9.bSCSvInU2BIQiV89NgLUbA"
+
+
+{"bucket":"tilestream-tilesets-production","key":"b6/_pending/b1j5c5o8m9rlc/ciegotur","accessKeyId":"ASIATNLVGLR2C4BBIE5G"
+,"secretAccessKey":"7WR2jWDaWFGADDbUJwOghhqw4rAhx/QaFrZUPTQx","sessionToken":"FwoGZXIvYXdzEJ3//////////wEaDPyX/aZmujOcR8ufMCKVAvSI/AvLA38spe7oTrQLgGQSG5W4pwPw/k1szC0TJt4l12EDogp8pOcjTyAuN+dyB4Anoc0xD92IKmi5L1RDuTIV6OQSxKndxY7NJNAc7QyWStetMEuhNFQSOb1VdL/9mzr4931uG+/0xaIDAgnsgrzcZUlkpa+D0zrtP5kaFO12grD6Q2+POfMRjnFqkU8qwFLkq8b5B6zGZChZT6+coqdi5wiAFYv7+m9ivSOpyyDsQzmmcWSg0qu/oJ/LlXUvTYJRn1ig32LiPbWsoqw+Cd1DeFRJPvjMEDktuKdlEm7TT/dYIQLMzsCIZBp/ExlsCkba0RSYh0MSHJ74sYdIa8az3I40fpY9Bjt4y4AtUd13A0vFxKMoiYmBrQYyKWoY0OB5KIWOAlWCPlKmQ6oqGaqmOciiSCr3JNuKrQCPFMyUCzOPENiN","url":"https://tilestream-tilesets-production.s3.amazonaws.com/b6/_pending/b1j5qfk5dpn1dj2cc5o8m9rlc/ciegotur"}
+
+
+{"bucket":"tilestream-tilesets-production","key":"27/_pending/onndccq8kim9rlc/ciegotur",
+"accessKeyId":"ASIATNLVGLR2B6NJTU5L",
+"secretAccessKey":"uf44H8bhVPCgwM72CXxd3tLLTY+pO8m8y0g",
+"sessionToken":"FwoGZXIvYXdzEJ3//////////wEaDF7Kd3v/T9KVAlfyLqAnlY+FMhGmva1qT/jX4O6ZRGqJug06Dmy2YjGoaoND5gsSi1Yn5PKGVjVyoL5QgAR8jYrliqUhqv8A2QTeTxwS/66pqPOf9nV1vKgehiRZWQj79Tb0eHOGwbT9+i+skFbMJldJsCFLbmgB39LrusKlTWYvIELbBAcJJlkKn0OfP3sLFEBzJf3s4l2NYETzX7DucY0XsmPtQoNaRvjIvizO/56vXAsbEVbNnin0IuWAF7gSOWIzavXSXW8nQqXRI9XNGUshFHt58WObjzLV8HIJRsAUmMsTDQ0ImcBJp/5GKeE517pzOgM3HjV3UQuc1YsPw9oyahDEI3hBXY8UbjlGpS1UbuXF5vYhgW/M8ObdJ6oo1oyBrQYyKbUDTFWdzZwwXk7v1TU4BhD0hddI6nYdKZkVI2sAR60xYdIs8txPumLR","url":"https://tilestream-tilesets-production.s3.amazonaws.com/27/_pending/onndc4d6jlu1zf3cq8kim9rlc/ciegotur"}
+
+
+set AWS_ACCESS_KEY_ID=ASIATNLVGJTU5L
+set AWS_SECRET_ACCESS_KEY=uf44H8bhVPCgwM72CtLLTY+pO86SXdKm8y0g
+set AWS_SESSION_TOKEN=FwoGZXIvYXdzEJ3//////////wEaDF7Kd3v/yKVAlfyLqAnlY+FMhGmva1qT/jX4O6ZRGqJug06Dmy2YjGoaoND5gsSi1Yn5PKGVjVyoL5QgAR8jYrliqUhqv8A2QTeTxwS/66pqPOf9nV1vKgehiRZWQj79Tb0eHOGwbT9+i+skFbMJldJsCFLbmgB39LrusKlTWYvIELbBAcJJlkKn0OfP3sLFEBzJf3s4l2NYETzX7DucY0XsmPtQoNaRvjIvizO/56vXAsbEVbNnin0IuWAF7gSOWIzavXSXW8nQqXRI9XNGUshFHt58WObjzLV8HIJRsAUmMsTDQ0ImcBJp/5GKeE517pzOgM3HjV3UQuc1YsPw9oyahDEI3hBXY8UbjlGpS1UbuXF5vYhgW/M8ObdJ6oo1oyBrQYyKbUDTFWdzZwwXk7v1TU4BhD0hddI6nYdKZkVI2sAR60xYdIs8txPumLR
+
+
+aws s3 cp T2019_KAR_POI_TABLE.json s3://tilestream-tilesets-production/27/_pending/onndc4d6q8kim9rlc/ciegotur --region us-east-1
+
+
+curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{"url": "http://tilestream-tilesets-production.s3.amazonaws.com/27/_pending/onndc4d6jlu1rlc/ciegotur","tileset": "ciegotur.T2019_KAR_POI_TABLE","name": "T2019_KAR_POI_TABLE"}' 'https://api.mapbox.com/uploads/v1/ciegotur?access_token=sk.eyJ1IjoiY2llZ290dXIiyOWx6ZWl1MDM4YTJqbnh5OXJnOXdvZyJ9.bSCSvInU2BIQiV89NgLUbA'
